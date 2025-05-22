@@ -1,0 +1,390 @@
+/* Import de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
+
+/* Variables de color */
+:root {
+  --primary:    #4cc3e3;  /* Azul del logo */
+  --secondary:  #8fc63f;  /* Verde del logo */
+  --accent:     #f0d843;  /* Amarillo del logo */
+  --dark:       #012d5a;  /* Texto principal */
+}
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía base */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Contenedor centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ——— Navbar ——— */
+.navbar {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;  /* Logo más grande */
+  width: auto;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Botones genéricos */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;  /* espacio entre todos los elementos hijos */
+}
+
+
+/* Botón de donación */
+.donate-btn {
+  background: var(--secondary);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.donate-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* ——— Hero ——— */
+.hero {
+  padding: 4rem 0;
+  background: var(--accent);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 0 0 60%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+/* Subtítulo estilo “niños” */
+.hero-subtitle {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1.6;
+  background: rgba(255,255,255,0.8);
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 550px;
+  margin-top: 1rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Reserva más espacio al texto y menos a la imagen */
+.hero-text {
+  flex: 0 0 60%;   /* ocupará el 60% del ancho */
+}
+
+.hero-img {
+  flex: 0 0 35%;   /* la imagen ocupará el 35% */
+  text-align: right;
+}
+
+/* Dentro de .hero-img, limita el ancho real de la img */
+.hero-img img {
+  max-width: 100%;  /* ocupará el 100% de ese 35% de flexbox */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ————— Ajustar altura de la Hero Image ————— */
+.hero-img img {
+  max-height: 600px;   /* altura máxima */
+  width: auto;         /* mantiene proporción */
+  object-fit: cover;   /* recorta si es necesario */
+}
+
+/* ————— Estilo “blob” con pseudo-elementos detrás ————— */
+.blob-img {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.blob-img::before,
+.blob-img::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* “Mancha” grande detrás */
+.blob-img::before {
+  width: 260px;
+  height: 260px;
+  background: var(--primary);
+  top: -40px;
+  left: -40px;
+}
+
+/* “Burbuja” secundaria */
+.blob-img::after {
+  width: 140px;
+  height: 140px;
+  background: var(--secondary);
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Ajustes a la imagen */
+.blob-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 70% 70% 80% 80% / 80% 80% 70% 70%; /* forma orgánica */
+}
+
+/* ——— Sección “Agenda tu cita” ——— */
+.appointment {
+  background: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.appointment-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+.appointment-content p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.4;
+}
+
+.appointment-btn {
+  background: var(--accent);
+  color: var(--dark);
+  padding: 0.75rem 2rem;
+}
+.appointment-btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+/* Imagen debajo del botón */
+.appointment-image {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.appointment-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ——— Sección de donación (repetida) ——— */
+.donate-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.donate-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.donate-section p {
+  margin-bottom: 1.5rem;
+}
+
+/* ——— Sección Artículos / Carrusel ——— */
+.articles {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.articles h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.card {
+  flex: 0 0 280px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  scroll-snap-align: start;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card .read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--dark);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: filter 0.3s ease;
+}
+
+.card .read-more:hover {
+  filter: brightness(0.9);
+}
+
+
+/* ——— Footer ——— */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.footer p {
+  opacity: 0.8;
+}
+

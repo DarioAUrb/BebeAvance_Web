@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Baloo+2:wght@400;600&display=swap');
+
+:root {
+  --primary:   #4cc3e3;
+  --secondary: #8fc63f;
+  --accent:    #f0d843;  /* Amarillo para 'Agenda tu cita' */
+  --dark:      #012d5a;
+  --light:     #f9f9f9;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ——— Navbar ——— */
+.navbar {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--primary);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;  /* espacio entre todos los elementos hijos */
+}
+
+/* Botón Agenda */
+.donate-btn {
+  background: var(--secondary);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.donate-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* ——— Historia ——— */
+.history {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.history .text {
+  flex: 1;
+}
+
+.history .text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.history .text p {
+  line-height: 1.6;
+}
+
+.history .image {
+  flex: 1;
+  text-align: center;
+}
+
+.history .image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ——— Cards ——— */
+.cards {
+  padding: 4rem 0;
+}
+
+.cards-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background: #fff;
+  flex: 1;
+  min-width: 220px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+/* ——— Bolitas detrás de imagen ——— */
+.history .image.blob-img {
+  position: relative;
+  overflow: visible;
+}
+
+.history .image.blob-img::before,
+.history .image.blob-img::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.history .image.blob-img::before {
+  width: 220px;
+  height: 220px;
+  background: var(--primary);
+  top: -40px;
+  left: -40px;
+}
+
+.history .image.blob-img::after {
+  width: 120px;
+  height: 120px;
+  background: var(--secondary);
+  bottom: -30px;
+  right: -30px;
+}
+
+
+/* ——— Sección “Agenda tu cita” ——— */
+.appointment {
+  background: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.appointment-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+.appointment-content p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.4;
+}
+
+.appointment-btn {
+  background: var(--accent);
+  color: var(--dark);
+  padding: 0.75rem 2rem;
+}
+.appointment-btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+
+
+/* ——— Footer ——— */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.footer p {
+  opacity: 0.8;
+}
