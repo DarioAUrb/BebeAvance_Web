@@ -1,48 +1,44 @@
-<!-- voluntarios.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Donadores - Bebé Advance</title>
-  <link rel="stylesheet" href="C:\Users\COMPUTOCKS\Documents\BebeAvance_Web\css\donadores.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-/>
+  <title>Registro de Voluntarios - Bebé Advance</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="../css/volunteers.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
+  <!-- navbar -->
+  <header class="navbar">
     <div class="container">
-      <a href="C:\Users\COMPUTOCKS\Documents\BebeAvance_Web\index.html">
+      <a href="../index.html">
         <img src="https://bebeavance.org/wp-content/uploads/2025/03/BBAvance.jpg#174" alt="Bebé Advance A.C." class="logo-img">
       </a>
       <nav class="nav-links">
-        <a href="">Quiénes Somos</C:\Users\COMPUTOCKS\Documents\BebeAvance_Web\html\quienessomos.htmla>
-        <a href="#servicios">Servicios</a>
-        <a href="C:\Users\COMPUTOCKS\Documents\BebeAvance_Web\html\voluntarios.html">Únete</a>
+        <a href="../html/whoWeAre.html">Quiénes Somos</a>
+        <a href="../html/services.html">Servicios</a>
+        <a href="../html/volunteers.html">Únete</a>
       </nav>
-      <a href="https://wa.me/524425048914" class="btn appointment-btn nav-appointment-btn">
-         Agenda tu cita
-      </a>
-      <a href="C:\Users\COMPUTOCKS\Documents\BebeAvance_Web\html\donadores.html" class="btn donate-btn">Haz una Donación</a>
+      <a href="https://wa.me/524425048914" class="btn appointment-btn nav-appointment-btn">Agenda tu cita</a>
+      <a href="./donation.html" class="btn donate-btn">Haz una Donación</a>
     </div>
-    </header>  
+  </header>
+
   <main class="volunteer-page">
+    <!-- volunteer intro section -->
     <section class="volunteer-intro">
       <div class="container">
-        <h1>¡Únete como Donador en Bebé Advance!</h1>
+        <h1>¡Únete como Voluntario en Bebé Advance!</h1>
         <p>
-        ¡Tú puedes cambiar el comienzo de muchas vidas!
-        En Bebé Avance, más de 50 bebés con daño neurológico reciben terapias especializadas que 
-        no podrían costear sin ayuda. Con tu donativo, contribuyes a que estos pequeños tengan 
-        acceso a rehabilitación temprana, mejorando sus probabilidades de desarrollarse física e 
-        intelectualmente. Cada peso cuenta y cada terapia marca la diferencia.
-        Dona hoy y sé parte del avance de un bebé. 
+          Comparte tu tiempo y tu pasión colaborando con nosotros. Ayuda a transformar la vida de bebés y familias,
+          aportando tu energía y habilidades en un ambiente lleno de compañerismo y propósito. ¡Tu voz y tu apoyo
+          marcan la diferencia!
         </p>
       </div>
     </section>
 
+    <!-- volunteer form section -->
     <section class="volunteer-form-section">
       <div class="container form-container">
         <form action="#" method="post" class="volunteer-form">
@@ -76,12 +72,12 @@
           </div>
 
           <div class="form-group">
-            <label for="disponibilidad">Organización o empresa</label>
+            <label for="disponibilidad">Disponibilidad</label>
             <input type="text" id="disponibilidad" name="disponibilidad" placeholder="Días y horarios" required>
           </div>
 
           <div class="form-group full-width">
-            <label for="mensaje">¿Por qué quieres ser donador?</label>
+            <label for="mensaje">¿Por qué quieres ser voluntario?</label>
             <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu motivación..."></textarea>
           </div>
 
@@ -91,7 +87,8 @@
     </section>
   </main>
 
-    <footer class="footer">
+  <!-- footer -->
+  <footer class="footer">
     <div class="container footer-content">
       <div class="social-links">
         <a href="https://www.instagram.com/bebe.avance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
@@ -104,11 +101,16 @@
           <i class="fa-brands fa-tiktok fa-lg"></i>
         </a>
       </div>
-      <p class="footer-text">
-        © 2025 Bebé Advance A.C. Todos los derechos reservados.
-      </p>
+      <p class="footer-text">© 2025 Bebé Advance A.C. Todos los derechos reservados.</p>
     </div>
   </footer>
-  
+
+  <!-- contact button -->
+  <a href="https://wa.me/524425048914" class="contact-float">
+    <span class="contact-icon">
+      <i class="fas fa-comments"></i>
+    </span>
+    <span>CONTACTO</span>
+  </a>
 </body>
 </html>

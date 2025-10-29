@@ -1,36 +1,31 @@
-/* Import de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
 
-/* Variables de color */
 :root {
-  --primary:    #4cc3e3;  /* Azul del logo */
-  --secondary:  #8fc63f;  /* Verde del logo */
-  --accent:     #f0d843;  /* Amarillo del logo */
-  --dark:       #012d5a;  /* Texto principal */
+  --primary:    #4cc3e3;
+  --secondary:  #8fc63f;
+  --accent:     #f0d843;
+  --dark:       #012d5a;
 }
 
-/* Reset global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Tipografía base */
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
   line-height: 1.6;
 }
 
-/* Contenedor centrado */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ——— Navbar ——— */
+/* navbar */
 .navbar {
   background: #fff;
   padding: 1rem 0;
@@ -43,10 +38,11 @@ body {
 .navbar .container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo-img {
-  height: 100px;  /* Logo más grande */
+  height: 100px;
   width: auto;
 }
 
@@ -87,7 +83,6 @@ body {
   left: 0;
 }
 
-/* Botones genéricos */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -96,24 +91,18 @@ body {
   font-weight: 600;
   transition: filter 0.3s ease, transform 0.2s ease;
 }
-.navbar .container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;  /* espacio entre todos los elementos hijos */
-}
 
-
-/* Botón de donación */
 .donate-btn {
   background: var(--secondary);
   color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .donate-btn:hover {
   filter: brightness(0.9);
 }
 
-/* ——— Hero ——— */
+/* hero */
 .hero {
   padding: 4rem 0;
   background: var(--accent);
@@ -123,7 +112,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .hero-text {
@@ -136,10 +124,9 @@ body {
   color: var(--dark);
 }
 
-/* Subtítulo estilo “niños” */
 .hero-subtitle {
   font-family: 'Baloo 2', cursive;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--dark);
   line-height: 1.6;
@@ -150,37 +137,20 @@ body {
   margin-top: 1rem;
 }
 
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Reserva más espacio al texto y menos a la imagen */
-.hero-text {
-  flex: 0 0 60%;   /* ocupará el 60% del ancho */
-}
-
 .hero-img {
-  flex: 0 0 35%;   /* la imagen ocupará el 35% */
+  flex: 0 0 35%;
   text-align: right;
 }
 
-/* Dentro de .hero-img, limita el ancho real de la img */
 .hero-img img {
-  max-width: 100%;  /* ocupará el 100% de ese 35% de flexbox */
+  max-height: 600px;
+  max-width: 100%;
+  width: auto;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
-/* ————— Ajustar altura de la Hero Image ————— */
-.hero-img img {
-  max-height: 600px;   /* altura máxima */
-  width: auto;         /* mantiene proporción */
-  object-fit: cover;   /* recorta si es necesario */
-}
-
-/* ————— Estilo “blob” con pseudo-elementos detrás ————— */
 .blob-img {
   position: relative;
   display: inline-block;
@@ -196,7 +166,6 @@ body {
   z-index: -1;
 }
 
-/* “Mancha” grande detrás */
 .blob-img::before {
   width: 260px;
   height: 260px;
@@ -205,7 +174,6 @@ body {
   left: -40px;
 }
 
-/* “Burbuja” secundaria */
 .blob-img::after {
   width: 140px;
   height: 140px;
@@ -214,15 +182,14 @@ body {
   right: -30px;
 }
 
-/* Ajustes a la imagen */
 .blob-img img {
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 70% 70% 80% 80% / 80% 80% 70% 70%; /* forma orgánica */
+  border-radius: 70% 70% 80% 80% / 80% 80% 70% 70%;
 }
 
-/* ——— Sección “Agenda tu cita” ——— */
+/* appointment */
 .appointment {
   background: #fff;
   padding: 4rem 0;
@@ -249,12 +216,12 @@ body {
   color: var(--dark);
   padding: 0.75rem 2rem;
 }
+
 .appointment-btn:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
 }
 
-/* Imagen debajo del botón */
 .appointment-image {
   text-align: center;
   margin-top: 2rem;
@@ -273,7 +240,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ——— Sección de donación (repetida) ——— */
+/* donate */
 .donate-section {
   text-align: center;
   padding: 4rem 0;
@@ -289,7 +256,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* ——— Sección Artículos / Carrusel ——— */
+/* articles */
 .articles {
   padding: 4rem 0;
   background: #fff;
@@ -356,8 +323,7 @@ body {
   filter: brightness(0.9);
 }
 
-
-/* ——— Footer ——— */
+/* footer */
 .footer {
   background: var(--dark);
   color: #fff;
@@ -388,3 +354,34 @@ body {
   opacity: 0.8;
 }
 
+/* contact float */
+.contact-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.contact-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

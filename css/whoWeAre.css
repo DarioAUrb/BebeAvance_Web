@@ -3,12 +3,11 @@
 :root {
   --primary:   #4cc3e3;
   --secondary: #8fc63f;
-  --accent:    #f0d843;  /* Amarillo para 'Agenda tu cita' */
+  --accent:    #f0d843;
   --dark:      #012d5a;
   --light:     #f9f9f9;
 }
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ body {
   padding: 0 20px;
 }
 
-/* ——— Navbar ——— */
+/* navbar */
 .navbar {
   background: #fff;
   padding: 1rem 0;
@@ -40,6 +39,7 @@ body {
 .navbar .container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo-img {
@@ -89,7 +89,6 @@ body {
   left: 0;
 }
 
-/* Botones */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -99,23 +98,17 @@ body {
   transition: filter 0.3s ease, transform 0.2s ease;
 }
 
-.navbar .container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;  /* espacio entre todos los elementos hijos */
-}
-
-/* Botón Agenda */
 .donate-btn {
   background: var(--secondary);
   color: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
 .donate-btn:hover {
   filter: brightness(0.9);
 }
 
-/* ——— Historia ——— */
+/* history */
 .history {
   padding: 4rem 0;
   background: #fff;
@@ -152,37 +145,6 @@ body {
   border-radius: 8px;
 }
 
-/* ——— Cards ——— */
-.cards {
-  padding: 4rem 0;
-}
-
-.cards-content {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  background: #fff;
-  flex: 1;
-  min-width: 220px;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.card h2 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  line-height: 1.5;
-}
-
-/* ——— Bolitas detrás de imagen ——— */
 .history .image.blob-img {
   position: relative;
   overflow: visible;
@@ -212,8 +174,37 @@ body {
   right: -30px;
 }
 
+/* cards */
+.cards {
+  padding: 4rem 0;
+}
 
-/* ——— Sección “Agenda tu cita” ——— */
+.cards-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background: #fff;
+  flex: 1;
+  min-width: 220px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+/* appointment */
 .appointment {
   background: #fff;
   padding: 4rem 0;
@@ -240,14 +231,13 @@ body {
   color: var(--dark);
   padding: 0.75rem 2rem;
 }
+
 .appointment-btn:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
 }
 
-
-
-/* ——— Footer ——— */
+/* footer */
 .footer {
   background: var(--dark);
   color: #fff;
@@ -276,4 +266,36 @@ body {
 
 .footer p {
   opacity: 0.8;
+}
+
+/* contact float */
+.contact-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #3b82f6;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.contact-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
